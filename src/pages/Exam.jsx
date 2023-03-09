@@ -191,7 +191,7 @@ function Exam() {
 			)}
 			{formSubmitted && (
 				// Render exam countdown if form is submitted
-				<section className='container flex flex-col items-center justify-between w-full mx-auto my-10 md:w-3/5'>
+				<section className='container flex flex-col items-center justify-between w-full mx-2 my-10 md:mx-auto md:w-3/5'>
 					{/* Display current time */}
 					<p className='p-5 mx-4 my-6 text-center border shadow-md text-8xl'>
 						{currentTime.toLocaleTimeString()}
