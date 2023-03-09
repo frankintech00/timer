@@ -1,7 +1,7 @@
 {
-	"name": "Enter Name",
-	"short_name": "EN",
-	"description": "Enter Description",
+	"name": "Exam Clock",
+	"short_name": "ExamClock",
+	"description": "A web application for conducting online exams with customizable exam title, start and end times. Displays countdown timer to exam start and remaining time during the exam. Supports saving exam setup data in local storage and handles accidental page refresh or closure. Includes a prompt to end the exam early if the user closes the browser window or navigates away from the page.",
 	"icons": [
 		{ "src": "/logo192.png", "sizes": "192x192", "type": "image/png" },
 		{ "src": "/logo512.png", "sizes": "512x512", "type": "image/png" },
