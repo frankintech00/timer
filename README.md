@@ -25,7 +25,7 @@ npm run build
 
 The App is hosted on [Netlify](https://www.netlify.com/).
 
-The App is deployed at https://app.netlify.com/teams/frankintech00/sites. Remember to edit the link before committing to GitHub.
+The App is deployed at https://examclock-fps.netlify.app/.
 
 ## Author
 
