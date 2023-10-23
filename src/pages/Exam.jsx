@@ -24,18 +24,31 @@ function Exam() {
 			// Update the current time state to the current time
 			setCurrentTime(new Date());
 			// Calculate the difference between the current time and the start or end time of the exam
-			let diffMs = currentTime < startDate ? startDate.getTime() - currentTime.getTime() : endTime.getTime() - currentTime.getTime();
+			let diffMs =
+				currentTime < startDate
+					? startDate.getTime() - currentTime.getTime()
+					: endTime.getTime() - currentTime.getTime();
 			// If the remaining time is less than or equal to zero, the exam is over
 			if (diffMs <= 0) {
 				setExamOver(true);
 				clearInterval(interval); // Clear the interval to stop updating the countdown
 			}
 			// Format the remaining time into hours, minutes and seconds
-			const hours = Math.floor(diffMs / (1000 * 60 * 60)).toString().padStart(2, '0');
-			const minutes = Math.floor((diffMs / (1000 * 60)) % 60).toString().padStart(2, '0');
-			const seconds = Math.floor((diffMs / 1000) % 60).toString().padStart(2, '0');
+			const hours = Math.floor(diffMs / (1000 * 60 * 60))
+				.toString()
+				.padStart(2, '0');
+			const minutes = Math.floor((diffMs / (1000 * 60)) % 60)
+				.toString()
+				.padStart(2, '0');
+			const seconds = Math.floor((diffMs / 1000) % 60)
+				.toString()
+				.padStart(2, '0');
 			// Set the countdown state to display the remaining time
-			setCountdown(hours > 0 ? `${hours}hr ${minutes}m ${seconds}s` : `${minutes}m ${seconds}s`);
+			setCountdown(
+				hours > 0
+					? `${hours}hr ${minutes}m ${seconds}s`
+					: `${minutes}m ${seconds}s`
+			);
 		}, 1000); // Update the countdown every second
 		// Clean up the interval on unmount
 		return () => clearInterval(interval);
